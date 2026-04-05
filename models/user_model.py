@@ -1,0 +1,8 @@
+def user_schema(user):
+    return {
+        "id": str(user["_id"]),
+        "name": user["name"],
+        "email": user["email"],
+        "role": user["role"],
+        "is_active": user.get("is_active", True)
+    }
